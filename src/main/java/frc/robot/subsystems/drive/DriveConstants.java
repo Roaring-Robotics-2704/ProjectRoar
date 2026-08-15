@@ -15,8 +15,8 @@ package frc.robot.subsystems.drive;
 
 import static edu.wpi.first.units.Units.*;
 
-import com.pathplanner.lib.config.ModuleConfig;
-import com.pathplanner.lib.config.RobotConfig;
+// import com.pathplanner.lib.config.ModuleConfig;
+// import com.pathplanner.lib.config.RobotConfig;
 import edu.wpi.first.math.geometry.Rotation2d;
 import edu.wpi.first.math.geometry.Translation2d;
 import edu.wpi.first.math.system.plant.DCMotor;
@@ -100,33 +100,33 @@ public class DriveConstants {
     public static final double turnPIDMaxInput = 2 * Math.PI; // Radians
 
     // PathPlanner configuration
-    public static final double robotMassKg = 45;
-    public static final double robotMOI = 6.883;
-    public static final double wheelCOF = 1.2;
-    public static final RobotConfig ppConfig = new RobotConfig(
-            robotMassKg,
-            robotMOI,
-            new ModuleConfig(
-                    wheelRadiusMeters,
-                    maxSpeedMetersPerSec,
-                    wheelCOF,
-                    driveGearbox.withReduction(driveMotorReduction),
-                    driveMotorCurrentLimit,
-                    1),
-            moduleTranslations);
+//     public static final double robotMassKg = 45;
+//     public static final double robotMOI = 6.883;
+//     public static final double wheelCOF = 1.2;
+//     public static final RobotConfig ppConfig = new RobotConfig(
+//             robotMassKg,
+//             robotMOI,
+//             new ModuleConfig(
+//                     wheelRadiusMeters,
+//                     maxSpeedMetersPerSec,
+//                     wheelCOF,
+//                     driveGearbox.withReduction(driveMotorReduction),
+//                     driveMotorCurrentLimit,
+//                     1),
+//             moduleTranslations);
 
-    public static final DriveTrainSimulationConfig mapleSimConfig = DriveTrainSimulationConfig.Default()
-            .withCustomModuleTranslations(moduleTranslations)
-            .withRobotMass(Kilogram.of(robotMassKg))
-            .withGyro(COTS.ofPigeon2())
-            .withSwerveModule(new SwerveModuleSimulationConfig(
-                    driveGearbox,
-                    turnGearbox,
-                    driveMotorReduction,
-                    turnMotorReduction,
-                    Volts.of(0.1),
-                    Volts.of(0.1),
-                    Meters.of(wheelRadiusMeters),
-                    KilogramSquareMeters.of(0.02),
-                    wheelCOF));
+//     public static final DriveTrainSimulationConfig mapleSimConfig = DriveTrainSimulationConfig.Default()
+//             .withCustomModuleTranslations(moduleTranslations)
+//             .withRobotMass(Kilogram.of(robotMassKg))
+//             .withGyro(COTS.ofPigeon2())
+//             .withSwerveModule(new SwerveModuleSimulationConfig(
+//                     driveGearbox,
+//                     turnGearbox,
+//                     driveMotorReduction,
+//                     turnMotorReduction,
+//                     Volts.of(0.1),
+//                     Volts.of(0.1),
+//                     Meters.of(wheelRadiusMeters),
+//                     KilogramSquareMeters.of(0.02),
+//                     wheelCOF));
 }

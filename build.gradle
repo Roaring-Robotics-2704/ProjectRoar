@@ -73,6 +73,10 @@ dependencies {
 
     testImplementation 'org.junit.jupiter:junit-jupiter:5.10.1'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+    implementation "org.littletonrobotics.akit:akit-java:26.0.2"
+    annotationProcessor "org.littletonrobotics.akit:akit-autolog:26.0.2"
+
 }
 
 test {
